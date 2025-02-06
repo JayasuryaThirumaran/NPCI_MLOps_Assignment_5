@@ -1,4 +1,5 @@
-# CI/CD Pipeline for Bank Marketing Data using GitHub Actions
+# Assignment-6
+## CI/CD Pipeline for Bank Marketing Data using GitHub Actions
 
 ##  Project Overview  
 This project implements a **CI/CD pipeline using GitHub Actions** to process **bank marketing data** and train a machine learning model.  
