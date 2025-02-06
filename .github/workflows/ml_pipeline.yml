@@ -26,6 +26,18 @@ jobs:
           python -m pip install --upgrade pip
           pip install pandas numpy scikit-learn joblib pytest
 
+      - name: Ensure data directory exists
+        run: mkdir -p data
+
+      - name: Download dataset artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: dataset
+          path: data
+
+      - name: List data directory (Debugging)
+        run: ls -l data/
+
       - name: Run preprocessing
         run: python preprocessing.py
 
