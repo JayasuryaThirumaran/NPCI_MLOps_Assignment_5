@@ -6,7 +6,7 @@ import pytest
 
 # Ensure Python can find train_model.py in the project root
 sys.path.insert(0, os.path.abspath(os.path.dirname(os.path.dirname(__file__))))
-from train_model import train_model
+
 
 def test_preprocessing():
     """Tests whether the preprocessing script runs without errors."""
@@ -24,6 +24,3 @@ def test_model_training():
         assert model is not None, "Model failed to train!"
     except Exception as e:
         pytest.fail(f"Model training test failed: {e}")
-
-if __name__ == "__main__":
-    pytest.main()
