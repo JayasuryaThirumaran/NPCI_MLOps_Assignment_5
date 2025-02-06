@@ -1,6 +1,11 @@
+import sys
+import os
 import pandas as pd
 import joblib
 import pytest
+
+# Ensure Python can find train_model.py in the project root
+sys.path.insert(0, os.path.abspath(os.path.dirname(os.path.dirname(__file__))))
 from train_model import train_model
 
 def test_preprocessing():
